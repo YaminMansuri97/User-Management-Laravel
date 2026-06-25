@@ -1,0 +1,10 @@
+.local/
+backend/vendor/
+backend/node_modules/
+backend/.env
+backend/database/database.sqlite
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+.idea/
+.vscode/

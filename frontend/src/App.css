@@ -1,0 +1,185 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f5f5f5;
+  color: #333333;
+  margin: 0;
+  padding: 20px;
+}
+
+.app-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 20px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+}
+
+header {
+  border-bottom: 2px solid #dddddd;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+h1 {
+  margin: 0 0 5px 0;
+}
+
+h2 {
+  margin: 0 0 15px 0;
+  border-bottom: 1px solid #eeeeee;
+  padding-bottom: 5px;
+}
+
+.app-main {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+@media (min-width: 768px) {
+  .app-main {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .form-section {
+    flex: 1;
+  }
+  .list-section {
+    flex: 2;
+  }
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 8px 15px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: 1px solid #0069d9;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  background-color: #0069d9;
+}
+
+button:disabled {
+  background-color: #cccccc;
+  border-color: #bbbbbb;
+  cursor: not-allowed;
+}
+
+.btn-delete {
+  background-color: #dc3545;
+  border-color: #bd2130;
+  color: #ffffff;
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+.btn-delete:hover {
+  background-color: #bd2130;
+}
+
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.list-header h2 {
+  margin: 0;
+  border: none;
+  padding: 0;
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.user-table th, .user-table td {
+  border: 1px solid #dddddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.user-table th {
+  background-color: #f8f9fa;
+  font-weight: bold;
+}
+
+.user-table tr:nth-child(even) {
+  background-color: #fcfcfc;
+}
+
+.error-text {
+  color: #dc3545;
+  font-size: 13px;
+  margin-top: 5px;
+  display: block;
+}
+
+.message-box {
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+}
+
+.message-box.success {
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+  color: #155724;
+}
+
+.message-box.error {
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  color: #721c24;
+}
+
+.btn-update {
+  background-color: #28a745;
+  border-color: #1e7e34;
+  color: #ffffff;
+  padding: 4px 8px;
+  font-size: 12px;
+  margin-right: 5px;
+}
+
+.btn-update:hover {
+  background-color: #218838;
+}
+
+.btn-cancel {
+  background-color: #6c757d;
+  border-color: #5a6268;
+  color: #ffffff;
+  margin-left: 10px;
+}
+
+.btn-cancel:hover {
+  background-color: #5a6268;
+}
