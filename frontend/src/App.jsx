@@ -24,7 +24,10 @@ function App() {
       const response = await axios.get(`${API_BASE_URL}/users`)
       setUsers(response.data)
     } catch (err) {
-      setMessage({ type: 'error', text: 'Failed to load users.' })
+      setMessage({ 
+        type: 'error', 
+        text: 'Failed to load users: ' + (err.response?.data?.message || err.message || 'Network Error') 
+      })
       console.error(err)
     } finally {
       setFetching(false)
@@ -72,7 +75,10 @@ function App() {
         })
         setErrors(formattedErrors)
       } else {
-        setMessage({ type: 'error', text: editingUser ? 'Failed to update user.' : 'Failed to add user.' })
+        setMessage({ 
+          type: 'error', 
+          text: (editingUser ? 'Failed to update user: ' : 'Failed to add user: ') + (err.response?.data?.message || err.message || 'Network Error')
+        })
         console.error(err)
       }
     } finally {
@@ -104,7 +110,10 @@ function App() {
       setUsers((prev) => prev.filter((user) => user.id !== id))
       setMessage({ type: 'success', text: 'User deleted successfully.' })
     } catch (err) {
-      setMessage({ type: 'error', text: 'Failed to delete user.' })
+      setMessage({ 
+        type: 'error', 
+        text: 'Failed to delete user: ' + (err.response?.data?.message || err.message || 'Network Error') 
+      })
       console.error(err)
     }
   }
